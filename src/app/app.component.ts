@@ -9,75 +9,64 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  readonly name = 'Avery Parker';
-  readonly title = 'Full-Stack Engineer + Observability Advocate';
-  readonly location = 'Austin, TX · Open to remote';
+  readonly name = 'Jayprakash Patidar';
+  readonly title = 'Java Backend & Full-Stack Developer';
+  readonly location = 'Open to Java backend or full-stack roles';
 
   readonly highlights = [
-    '8+ years building resilient platforms for fintech and SaaS teams.',
-    'Led MTTR reduction programs by pairing incident data with design systems.',
-    'Focused on developer experience, SLOs, and clean UI foundations.'
+    '2+ years building full-stack and backend services with Java and Angular.',
+    'Experienced in vehicle diagnostics and service tester tool development.',
+    'Hands-on with CI/CD pipelines, Docker, and code quality automation.'
   ];
 
   readonly skills = [
-    'Angular 17',
-    'TypeScript',
-    'Node.js',
+    'Java 8–21',
     'Spring Boot',
-    'PostgreSQL',
-    'Kubernetes',
-    'Grafana',
-    'OpenTelemetry',
+    'REST APIs',
+    'Angular',
+    'SQL',
+    'MongoDB',
     'CI/CD',
-    'Design Systems'
+    'Azure',
+    'Docker',
+    'SonarQube'
   ];
 
   readonly projects = [
     {
-      name: 'Incident Command Center',
+      name: 'Vehicle Diagnostics Platform',
       description:
-        'Unified on-call tooling with automated runbooks, Slack actions, and release tracking to cut response time by 32%.',
-      tags: ['Angular', 'Nx', 'RxJS', 'Material']
+        'Built diagnostic workflows and dashboards to streamline troubleshooting and reporting.',
+      tags: ['Java', 'Spring Boot', 'Angular']
     },
     {
-      name: 'Alert Noise Lab',
+      name: 'Service Tester Tooling',
       description:
-        'Alert routing engine that clusters noisy events and recommends suppression rules using service ownership graphs.',
-      tags: ['Spring Boot', 'Kafka', 'Redis', 'Grafana']
+        'Delivered tester utilities to validate service performance and quality across modules.',
+      tags: ['REST APIs', 'SQL', 'MongoDB']
     },
     {
-      name: 'Portfolio Web',
+      name: 'CI/CD Automation',
       description:
-        'A fast, accessible portfolio template built with standalone Angular components and SCSS tokens.',
-      tags: ['Angular', 'SCSS', 'Accessibility']
+        'Automated builds, containerization, and static analysis to improve delivery confidence.',
+      tags: ['Azure', 'Docker', 'SonarQube']
     }
   ];
 
   readonly experience = [
     {
-      role: 'Senior Front-End Engineer',
-      company: 'SignalOps',
-      time: '2021 — Present',
-      summary: 'Built incident analytics dashboards, shipped design system v2, and mentored 4 engineers.'
-    },
-    {
-      role: 'Full-Stack Engineer',
-      company: 'Flux Financial',
-      time: '2018 — 2021',
-      summary: 'Owned reliability metrics platform, migrated legacy services to Spring Boot, and improved alert routing.'
-    },
-    {
-      role: 'UI Engineer',
-      company: 'Sparkline Labs',
-      time: '2016 — 2018',
-      summary: 'Created responsive reporting suite and introduced accessibility standards across product teams.'
+      role: 'Full Stack Developer',
+      company: 'Vehicle Diagnostics Domain',
+      time: '2+ years',
+      summary: 'Delivered backend services, REST APIs, and Angular interfaces for diagnostics and tester tools.'
     }
   ];
 
   readonly contact = {
-    email: 'hello@averyparker.dev',
-    github: 'github.com/averyparker',
-    linkedin: 'linkedin.com/in/averyparker',
-    availability: 'Available for product + platform consulting starting May 2025.'
+    email: '',
+    emailNote: 'Email available upon request.',
+    github: '',
+    linkedin: '',
+    availability: 'Open to Java backend or full-stack developer opportunities.'
   };
 }

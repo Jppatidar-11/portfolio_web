@@ -6,15 +6,22 @@
       <h2>{{ title }}</h2>
       <p class="location">{{ location }}</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="mailto:{{ contact.email }}">Start a project</a>
+        <a class="btn btn--primary" href="#contact">Get in touch</a>
         <a class="btn btn--ghost" href="#projects">View work</a>
       </div>
     </div>
-    <div class="hero__card">
-      <p class="card__title">What I deliver</p>
-      <ul>
-        <li *ngFor="let item of highlights">{{ item }}</li>
-      </ul>
+    <div class="hero__aside">
+      <img
+        class="profile-photo"
+        src="assets/profile-placeholder.svg"
+        alt="Jayprakash Patidar profile photo placeholder"
+      />
+      <div class="hero__card">
+        <p class="card__title">What I deliver</p>
+        <ul>
+          <li *ngFor="let item of highlights">{{ item }}</li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -22,8 +29,8 @@
     <div class="section__header">
       <h3>About</h3>
       <p>
-        I design incident-aware interfaces, build scalable APIs, and help teams ship calmer operations.
-        My work blends engineering leadership with a deep focus on developer experience.
+        Full-stack developer with 2+ years of experience delivering Java and Angular solutions.
+        Focused on building reliable REST APIs, scalable backends, and intuitive interfaces for diagnostics tooling.
       </p>
     </div>
     <div class="chips">
@@ -34,7 +41,7 @@
   <section class="section" id="projects">
     <div class="section__header">
       <h3>Selected Projects</h3>
-      <p>Enterprise-ready products that improve incident response, visibility, and reliability.</p>
+      <p>Highlights from diagnostics platforms, service tester tooling, and delivery automation.</p>
     </div>
     <div class="grid">
       <article class="card" *ngFor="let project of projects">
@@ -50,7 +57,7 @@
   <section class="section" id="experience">
     <div class="section__header">
       <h3>Experience</h3>
-      <p>Leadership roles focused on incident analytics, platform reliability, and UI systems.</p>
+      <p>Hands-on delivery across Java backend services, Angular interfaces, and CI/CD pipelines.</p>
     </div>
     <div class="timeline">
       <div class="timeline__item" *ngFor="let item of experience">
@@ -69,13 +76,22 @@
   <section class="section" id="contact">
     <div class="contact">
       <div>
-        <h3>Let’s build calmer operations.</h3>
+        <h3>Let’s build reliable systems together.</h3>
         <p>{{ contact.availability }}</p>
       </div>
       <div class="contact__details">
-        <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
-        <a href="https://{{ contact.github }}" target="_blank" rel="noreferrer">{{ contact.github }}</a>
-        <a href="https://{{ contact.linkedin }}" target="_blank" rel="noreferrer">{{ contact.linkedin }}</a>
+        <span *ngIf="contact.email; else emailNote">
+          <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+        </span>
+        <ng-template #emailNote>
+          <span>{{ contact.emailNote }}</span>
+        </ng-template>
+        <a *ngIf="contact.github" href="https://{{ contact.github }}" target="_blank" rel="noreferrer">
+          {{ contact.github }}
+        </a>
+        <a *ngIf="contact.linkedin" href="https://{{ contact.linkedin }}" target="_blank" rel="noreferrer">
+          {{ contact.linkedin }}
+        </a>
       </div>
     </div>
   </section>

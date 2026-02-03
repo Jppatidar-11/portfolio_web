@@ -39,6 +39,21 @@
         align-items: center;
       }
 
+      .hero__aside {
+        display: grid;
+        gap: 20px;
+        justify-items: center;
+      }
+
+      .profile-photo {
+        width: min(220px, 100%);
+        aspect-ratio: 1 / 1;
+        border-radius: 24px;
+        object-fit: cover;
+        box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+        background: #fff;
+      }
+
       .eyebrow {
         text-transform: uppercase;
         letter-spacing: 0.24rem;
@@ -256,7 +271,8 @@
         justify-items: start;
       }
 
-      .contact a {
+      .contact a,
+      .contact span {
         color: #fff;
         text-decoration: none;
         font-weight: 600;
@@ -279,21 +295,28 @@
         <header class="hero">
           <div>
             <p class="eyebrow">Portfolio</p>
-            <h1>Avery Parker</h1>
-            <h2>Full-Stack Engineer + Observability Advocate</h2>
-            <p class="location">Austin, TX · Open to remote</p>
+            <h1>Jayprakash Patidar</h1>
+            <h2>Java Backend &amp; Full-Stack Developer</h2>
+            <p class="location">Open to Java backend or full-stack roles</p>
             <div class="hero__actions">
-              <a class="btn btn--primary" href="mailto:hello@averyparker.dev">Start a project</a>
+              <a class="btn btn--primary" href="#contact">Get in touch</a>
               <a class="btn btn--ghost" href="#projects">View work</a>
             </div>
           </div>
-          <div class="hero__card">
-            <p class="card__title">What I deliver</p>
-            <ul>
-              <li>8+ years building resilient platforms for fintech and SaaS teams.</li>
-              <li>Led MTTR reduction programs by pairing incident data with design systems.</li>
-              <li>Focused on developer experience, SLOs, and clean UI foundations.</li>
-            </ul>
+          <div class="hero__aside">
+            <img
+              class="profile-photo"
+              src="assets/profile-placeholder.svg"
+              alt="Jayprakash Patidar profile photo placeholder"
+            />
+            <div class="hero__card">
+              <p class="card__title">What I deliver</p>
+              <ul>
+                <li>2+ years building full-stack and backend services with Java and Angular.</li>
+                <li>Experienced in vehicle diagnostics and service tester tool development.</li>
+                <li>Hands-on with CI/CD pipelines, Docker, and code quality automation.</li>
+              </ul>
+            </div>
           </div>
         </header>
 
@@ -301,63 +324,59 @@
           <div class="section__header">
             <h3>About</h3>
             <p>
-              I design incident-aware interfaces, build scalable APIs, and help teams ship calmer operations.
-              My work blends engineering leadership with a deep focus on developer experience.
+              Full-stack developer with 2+ years of experience delivering Java and Angular solutions.
+              Focused on building reliable REST APIs, scalable backends, and intuitive interfaces for diagnostics tooling.
             </p>
           </div>
           <div class="chips">
-            <span class="chip">Angular 17</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">Node.js</span>
+            <span class="chip">Java 8–21</span>
             <span class="chip">Spring Boot</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">Kubernetes</span>
-            <span class="chip">Grafana</span>
-            <span class="chip">OpenTelemetry</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Angular</span>
+            <span class="chip">SQL</span>
+            <span class="chip">MongoDB</span>
             <span class="chip">CI/CD</span>
-            <span class="chip">Design Systems</span>
+            <span class="chip">Azure</span>
+            <span class="chip">Docker</span>
+            <span class="chip">SonarQube</span>
           </div>
         </section>
 
         <section class="section" id="projects">
           <div class="section__header">
             <h3>Selected Projects</h3>
-            <p>Enterprise-ready products that improve incident response, visibility, and reliability.</p>
+            <p>Highlights from diagnostics platforms, service tester tooling, and delivery automation.</p>
           </div>
           <div class="grid">
             <article class="card">
-              <h4>Incident Command Center</h4>
+              <h4>Vehicle Diagnostics Platform</h4>
               <p>
-                Unified on-call tooling with automated runbooks, Slack actions, and release tracking to cut response
-                time by 32%.
+                Built diagnostic workflows and dashboards to streamline troubleshooting and reporting.
               </p>
               <div class="tags">
-                <span>Angular</span>
-                <span>Nx</span>
-                <span>RxJS</span>
-                <span>Material</span>
-              </div>
-            </article>
-            <article class="card">
-              <h4>Alert Noise Lab</h4>
-              <p>
-                Alert routing engine that clusters noisy events and recommends suppression rules using service
-                ownership graphs.
-              </p>
-              <div class="tags">
+                <span>Java</span>
                 <span>Spring Boot</span>
-                <span>Kafka</span>
-                <span>Redis</span>
-                <span>Grafana</span>
+                <span>Angular</span>
               </div>
             </article>
             <article class="card">
-              <h4>Portfolio Web</h4>
-              <p>A fast, accessible portfolio template built with standalone Angular components and SCSS tokens.</p>
+              <h4>Service Tester Tooling</h4>
+              <p>
+                Delivered tester utilities to validate service performance and quality across modules.
+              </p>
               <div class="tags">
-                <span>Angular</span>
-                <span>SCSS</span>
-                <span>Accessibility</span>
+                <span>REST APIs</span>
+                <span>SQL</span>
+                <span>MongoDB</span>
+              </div>
+            </article>
+            <article class="card">
+              <h4>CI/CD Automation</h4>
+              <p>Automated builds, containerization, and static analysis to improve delivery confidence.</p>
+              <div class="tags">
+                <span>Azure</span>
+                <span>Docker</span>
+                <span>SonarQube</span>
               </div>
             </article>
           </div>
@@ -366,37 +385,17 @@
         <section class="section" id="experience">
           <div class="section__header">
             <h3>Experience</h3>
-            <p>Leadership roles focused on incident analytics, platform reliability, and UI systems.</p>
+            <p>Hands-on delivery across Java backend services, Angular interfaces, and CI/CD pipelines.</p>
           </div>
           <div class="timeline">
             <div class="timeline__item">
               <div class="timeline__meta">
-                <h4>Senior Front-End Engineer</h4>
-                <span>SignalOps</span>
+                <h4>Full Stack Developer</h4>
+                <span>Vehicle Diagnostics Domain</span>
               </div>
               <div class="timeline__content">
-                <span class="timeline__time">2021 — Present</span>
-                <p>Built incident analytics dashboards, shipped design system v2, and mentored 4 engineers.</p>
-              </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__meta">
-                <h4>Full-Stack Engineer</h4>
-                <span>Flux Financial</span>
-              </div>
-              <div class="timeline__content">
-                <span class="timeline__time">2018 — 2021</span>
-                <p>Owned reliability metrics platform, migrated legacy services to Spring Boot, and improved alert routing.</p>
-              </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__meta">
-                <h4>UI Engineer</h4>
-                <span>Sparkline Labs</span>
-              </div>
-              <div class="timeline__content">
-                <span class="timeline__time">2016 — 2018</span>
-                <p>Created responsive reporting suite and introduced accessibility standards across product teams.</p>
+                <span class="timeline__time">2+ years</span>
+                <p>Delivered backend services, REST APIs, and Angular interfaces for diagnostics and tester tools.</p>
               </div>
             </div>
           </div>
@@ -405,13 +404,11 @@
         <section class="section" id="contact">
           <div class="contact">
             <div>
-              <h3>Let’s build calmer operations.</h3>
-              <p>Available for product + platform consulting starting May 2025.</p>
+              <h3>Let’s build reliable systems together.</h3>
+              <p>Open to Java backend or full-stack developer opportunities.</p>
             </div>
             <div class="contact__details">
-              <a href="mailto:hello@averyparker.dev">hello@averyparker.dev</a>
-              <a href="https://github.com/averyparker" target="_blank" rel="noreferrer">github.com/averyparker</a>
-              <a href="https://linkedin.com/in/averyparker" target="_blank" rel="noreferrer">linkedin.com/in/averyparker</a>
+              <span>Email available upon request.</span>
             </div>
           </div>
         </section>
